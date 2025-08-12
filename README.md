@@ -40,3 +40,5 @@ I treated this like a real SOC environment – from configuring log sources to a
 index=* sourcetype=XmlWinEventLog:Microsoft-Windows-Sysmon/Operational
 | search Image="*powershell.exe*" OR CommandLine="*powershell*"
 | table _time user CommandLine
+
+### Multiple Failed Logons
