@@ -1,0 +1,9 @@
+index=* sourcetype="WinEventLog:Security" EventCode=4625
+| eval TargetAccount=mvindex(Account_Name,1)
+| bin _time span=5m
+| stats count as FailedAttempts
+    values(Failure_Reason) as FailureReason
+    values(Logon_Type) as LogonType
+    by _time host TargetAccount Source_Network_Address
+| where FailedAttempts >= 3
+| sort - FailedAttempts
