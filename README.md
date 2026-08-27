@@ -6,8 +6,6 @@ The project walks through building a Splunk server on Ubuntu, pulling in logs fr
 
 I treated this like a real SOC environment – from configuring log sources to actually detecting simulated attacks and writing up my findings.
 
----
-
 ## Lab Setup
 **Environment:**
 - Splunk Enterprise 9.4.3 running on Ubuntu 24.04 (VirtualBox)
