@@ -1,0 +1,38 @@
+*******Ubuntu Splunk VM Details:
+IP address: 192.168.4.32
+Account: mahdi
+PW: Mahdi
+
+To start the server:
+>sudo /opt/splunk/bin/splunk start
+
+Confirm Splunk Server's current IP address by:
+>hostname -I
+
+
+to SSH into the VM:
+
+turn it on
+
+Open powershell on host PC
+
+ssh mahdi@192.168.4.32
+password is mahdi
+
+Enabled SSH to auto start everytime the VM boots via:
+>sudo /opt/splunk/bin/splunk status
+
+
+*********Windows VM:
+
+PW: Admin111
+
+SplunkForwarder admin creds:
+adminlt
+Admin111
+
+to check the status of server
+>cd "C:\Program Files\SplunkUniversalForwarder\bin"
+>splunk status
+>splunk list forward-server -auth admin:Admin111
+
